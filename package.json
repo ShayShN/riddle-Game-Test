@@ -1,0 +1,23 @@
+{
+  "name": "riddle-game",
+  "version": "1.0.0",
+  "description": "Shay nechmad\r 208795658\r Galil",
+  "homepage": "https://github.com/ShayShN/riddle-Game-Test#readme",
+  "bugs": {
+    "url": "https://github.com/ShayShN/riddle-Game-Test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShayShN/riddle-Game-Test.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
