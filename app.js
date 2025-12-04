@@ -11,8 +11,7 @@ function main() {
     for (const r of r3Combine){
         askRiddle(r);
     }
-    
-    askRiddle(createNewPlayer)
+
     addSolveTime(createNewPlayer, createNewPlayer.timeToAnswer)
     showStats(createNewPlayer)  
     }
