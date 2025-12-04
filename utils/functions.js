@@ -15,25 +15,24 @@ export function showStats(player) {
     console.log(`Time for answers in Second: ${(player.timesSeconds) / r3Combine.length}`);
 }
 
-
-
 export function askRiddle(riddleObj) {
     let timeToAnswer = 0
-    console.log(riddleObj.name);
-    console.log(riddleObj.taskDescription);
+    console.log(riddleObj['name']);
+    console.log(riddleObj['taskDescription']);
     for (const k in riddleObj) {
         if (k === 'choices') {
-            console.log(riddleObj.k); 
+            console.log(riddleObj[k]); 
         }
     }
-  while (true) {
-            const dateNow = Date.now()
-            let answer = String(input("enter your choice: "))
-            if (answer !== riddleObj["correctAnswer"]) {
-                continue
-            }
-            else{timeToAnswer += (Date.now() - dateNow);
-             break}
-        } 
-    return timeToAnswer
+    while (true) {
+        const dateNow = Date.now()
+        const answer = String(input("enter your choice: "))
+        if (answer === riddleObj.correctAnswer) {
+            timeToAnswer += (Date.now() - dateNow);
+            break
+        }
+        
+    } 
+    // return timeToAnswer
+    
 }
