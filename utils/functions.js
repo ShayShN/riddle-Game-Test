@@ -24,13 +24,19 @@ export function askRiddle(riddleObj) {
             console.log(riddleObj[k]); 
         }
     }
-    const dateNow = Date.now()
+    
     while (true) {
         const answer = String(input("enter your choice: "))
         if (answer === riddleObj.correctAnswer) {
             break
         }  
     } 
-    return Date.now() - dateNow
     
+    
+}
+export function measureSolveTime(fn, arg) {
+    const dateStart = Date.now()
+    fn(arg)
+    const dateEnd = Date.now()
+    return dateEnd - dateStart
 }
