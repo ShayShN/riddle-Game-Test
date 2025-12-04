@@ -11,12 +11,12 @@ export function addSolveTime(player, seconds) {
     player.timesSeconds.push(seconds / 1000)
 }
 export function showStats(player) {
-    console.log(`Total time: ${player.timesSeconds}`);
-    console.log(`Time for answers in Second: ${(player.timesSeconds) / r3Combine.length}`);
+    const sums = player.timesSeconds.reduce((a,b) => a + b, 0)
+    console.log(`Total time: ${sums}`);
+    console.log(`Time for answers avg: ${(sums) / player.timesSeconds.length}`);
 }
 
 export function askRiddle(riddleObj) {
-    let timeToAnswer = 0
     console.log(riddleObj['name']);
     console.log(riddleObj['taskDescription']);
     for (const k in riddleObj) {
@@ -24,15 +24,13 @@ export function askRiddle(riddleObj) {
             console.log(riddleObj[k]); 
         }
     }
+    const dateNow = Date.now()
     while (true) {
-        const dateNow = Date.now()
         const answer = String(input("enter your choice: "))
         if (answer === riddleObj.correctAnswer) {
-            timeToAnswer += (Date.now() - dateNow);
             break
-        }
-        
+        }  
     } 
-    // return timeToAnswer
+    return Date.now() - dateNow
     
 }
