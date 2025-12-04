@@ -18,10 +18,8 @@ export function showStats(player) {
 
 export function askRiddle(riddleObj) {
     let timeToAnswer = 0
-    for (const r of riddleObj){
-    console.log(r.name);
-    console.log(r.taskDescription);
-    }
+    console.log(riddleObj.name);
+    console.log(riddleObj.taskDescription);
     for (const k in riddleObj) {
         if (k === choices) {
             console.log(riddleObj.k); 
