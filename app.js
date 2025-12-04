@@ -9,7 +9,6 @@ function main() {
     const createNewPlayer = createPlayer(name) 
     
     for (const r of r3Combine){
-        // const funcAsk = askRiddle(r);
         const measure = measureSolveTime(askRiddle,r)
         addSolveTime(createNewPlayer, measure)
 
