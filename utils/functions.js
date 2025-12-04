@@ -23,7 +23,7 @@ export function askRiddle(riddleObj) {
     console.log(riddleObj.taskDescription);
     for (const k in riddleObj) {
         if (k === 'choices') {
-            console.log(riddleObj.k); 
+            console.log(riddleObj[k]); 
         }
     }
   while (true) {

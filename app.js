@@ -7,15 +7,17 @@ import { createPlayer, addSolveTime, showStats, askRiddle} from "./utils/functio
 function main() {
     const name = input("What is your name? : ")
     const createNewPlayer = createPlayer(name) 
-    askRiddeles(r3Combine)
-    const askRiddeles = askRiddle(r3Combine)
-
+    
+    for (const r of r3Combine){
+        askRiddle(r);
+    }
+    
+    askRiddle(createNewPlayer)
     addSolveTime(createNewPlayer, createNewPlayer.timeToAnswer)
     showStats(createNewPlayer)  
-  
     }
 
-    
+
     
 
 main()
