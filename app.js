@@ -9,15 +9,13 @@ function main() {
     const createNewPlayer = createPlayer(name) 
     
     for (const r of r3Combine){
-        askRiddle(r);
+        const funcAsk = askRiddle(r);
+        addSolveTime(createNewPlayer, funcAsk)
+
     }
+
     
-    askRiddle(createNewPlayer)
-    addSolveTime(createNewPlayer, createNewPlayer.timeToAnswer)
     showStats(createNewPlayer)  
     }
-
-
-    
 
 main()
